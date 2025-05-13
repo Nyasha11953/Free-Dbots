@@ -1,0 +1,59 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
+ <block type="tick_analysis" id="QMZW5hKXjSXmMOv^73`%" x="1230" y="1131">
+ <statement name="TICKANALYSIS_STACK">
+ <block type="variables_set" id="5ceQD1pZZy|+R)N2Y0cg">
+ <field name="VAR">Chikou_Span</field>
+ <value name="VALUE">
+ <block type="sma" id="143eeMmgzzvh{:39f:J4">
+ <value name="INPUT">
+ <block type="ohlc_values" id="ks57AOT0zBmGADn#zp4[">
+ <field name="OHLCFIELD_LIST">close</field>
+ <field name="CANDLEINTERVAL_LIST">default</field>
+ </block>
+ </value>
+ <value name="PERIOD">
+ <shadow type="math_number" id="7]hbI[8TE0Zkzyh?5rc+">
+ <field name="NUM">26</field>
+ </shadow>
+ </value>
+ </block>
+ </value>
+ <next>
+ <block type="variables_set" id="QSJJDbZ1kJ$`mK){~a3s">
+ <field name="VAR">EMA5</field>
+ <value name="VALUE">
+ <block type="ema" id="o^{^n)|dD9P5]z=XMkYD">
+ <value name="INPUT">
+ <block type="ohlc_values" id="G7S*w^l!tv}n|9/Mwl87">
+ <field name="OHLCFIELD_LIST">close</field>
+ <field name="CANDLEINTERVAL_LIST">default</field>
+ </block>
+ </value>
+ <value name="PERIOD">
+ <shadow type="math_number" id="%n2cYM~mOC%G8#SM/AGQ">
+ <field name="NUM">5</field>
+ </shadow>
+ </value>
+ </block>
+ </value>
+ <next>
+ <block type="variables_set" id="}wwiF|DZFMXScQvp3M:C">
+ <field name="VAR">EMA9</field>
+ <value name="VALUE">
+ <block type="ema" id="27,0*_}#6Uf+OgL7a`;2">
+ <value name="INPUT">
+ <block type="ohlc_values" id="yF*Gv}cxa+1*+(bV#7{%">
+ <field name="OHLCFIELD_LIST">close</field>
+ <field name="CANDLEINTERVAL_LIST">default</field>
+ </block>
+ </value>
+ <value name="PERIOD">
+ <shadow type="math_number" id="k@KJED%-#N)7;Ac/}if/">
+ <field name="NUM">9</field>
+ </shadow>
+ </value>
+ </block>
+ </value>
+ <next>
+ <block type="variables_set" id=")~=I6%jwlt)ub(8]fhdj">
+ <field name="VAR">SMA9_HIGH</field>
